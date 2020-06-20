@@ -1,0 +1,24 @@
+@charset "utf-8";
+html, body {
+	overflow-x: hidden;
+}
+.title {
+	position: relative;
+	left: -50px;
+	font-size: 430px;
+	white-space: nowrap;
+}
+.text_wrap {
+	display: flex;
+	padding-left: 300px;
+}
+.text:last-child {
+	margin-left: 200px;
+}
+.text p:first-child {
+	font-size: 36px;
+}
+.text p:last-child {
+	font-size: 20px;
+	margin-top: 50px;
+}
