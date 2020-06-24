@@ -6,99 +6,122 @@ main {
 	display: flex;
 	height: 100%;
 }
-main > div {
+.portrait {
 	width: 25%;
 	height: 100%;
 	display: flex;
 	align-items: flex-end;
 	padding: 0 0 30px 30px;
 	transition: .3s;
+	position: relative;
 }
-main > div > p {
+.portrait > p {
 	font-size: 90px;
 	position: relative;
 	z-index: 1;
 }
-main > div:hover {
+.portrait:hover {
 	color: #fff;
+	opacity: 1;
 }
-main > div > p > span {
+.portrait > p > span {
 	font-size: 50px;
 	font-family: 'Tangerine'
 }
-.hubert {
-	position: relative;
+.portrait::after {
+	content:'';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: .3s;
+}
+.portrait:hover::after {
+	opacity: 1;
 }
 .hubert::after {
-	content:'';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: url(../img/hubert.png) no-repeat;
-	background-position-x: -200px;
-	opacity: 0;
-	transition: .3s;
-	cursor: pointer;
-}
-.hubert:hover::after {
-	opacity: 1;
-}
-.rembrandt {
-	position: relative;
+	background: url(../img/hubert.png) no-repeat -200px 0;
 }
 .rembrandt::after {
-	content:'';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: url(../img/rembrandt.png) no-repeat;
-	background-position-x: -100px;
-	opacity: 0;
-	transition: .3s;
-	cursor: pointer;
-}
-.rembrandt:hover::after {
-	opacity: 1;
-}
-.henry {
-	position: relative;
+	background: url(../img/rembrandt.png) no-repeat -100px 0;
 }
 .henry::after {
-	content:'';
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: url(../img/henry.jpg) no-repeat;
-	background-position-x: -100px;
-	opacity: 0;
-	transition: .3s;
-	cursor: pointer;
-}
-.henry:hover::after {
-	opacity: 1;
-}
-.charles {
-	position: relative;
+	background: url(../img/henry.jpg) no-repeat -100px 0;
 }
 .charles::after {
-	content:'';
-	position: absolute;
-	width: 100%;
-	height: 100%;
+	background: url(../img/charles.jpg) no-repeat -110px 0;
+}
+.info_wrap {
+	position: fixed;
 	top: 0;
 	left: 0;
-	background: url(../img/charles.jpg) no-repeat;
-	background-position-x: -110px;
-	opacity: 0;
-	transition: .3s;
-	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	z-index: 6;
+	display: none;
 }
-.charles:hover::after {
-	opacity: 1;
+.info_wrap .face {
+	width: 25%;
+	height: 100%;
+	z-index: 10;
+	box-shadow: 0 0 5px 2px #000;
+}
+.info_wrap .info {
+	width: 75%;
+	height: 100%;
+	z-index:7;
+	position: relative;
+}
+.info_wrap .info .prev {
+	width: 48px;
+	height: 48px;
+	position: absolute;
+	top: 10px;
+	left: 150px;
+	background: url(../img/arrow.png) no-repeat;
+	z-index: 8;
+	transform: rotate(180deg);
+}
+.info_wrap .info p {
+	color: #fff;
+	padding: 50px 150px 0 150px;
+}
+.info_wrap .info p span {
+	font-size: 24px;
+}
+.info_wrap .info p:nth-of-type(1) {
+	font-size: 100px;
+	padding-top: 100px;
+	position: relative;
+}
+.info_wrap .info p:nth-of-type(2) {
+	font-size: 24px;
+	line-height: 1.5;
+	letter-spacing: 1px;
+}
+.hubert_info_wrap .face {
+	background: url(../img/hubert.png) no-repeat -200px 0;
+}
+.hubert_info_wrap .info {
+	background: url(../img/hubertback.png) no-repeat 0 -100px;
+}
+.rembrandt_info_wrap .face {
+	background: url(../img/rembrandt.png) no-repeat -100px 0;
+}
+.rembrandt_info_wrap .info {
+	background: url(../img/rembrandtback.jpg) no-repeat center;
+}
+.henry_info_wrap .face {
+	background: url(../img/henry.jpg) no-repeat -100px 0;
+}
+.henry_info_wrap .info {
+  background: url(../img/henryback.jpg) no-repeat;
+}
+.charles_info_wrap .face {
+	background: url(../img/charles.jpg) no-repeat -110px 0;
+}
+.charles_info_wrap .info {
+  background: url(../img/charlesback.jpg) no-repeat;
 }

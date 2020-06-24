@@ -22,3 +22,9 @@ html, body {
 	font-size: 20px;
 	margin-top: 50px;
 }
+.copy {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	font-size: 14px;
+}
