@@ -28,3 +28,28 @@ html, body {
 	right: 5px;
 	font-size: 14px;
 }
+@media (max-width: 1023px) {
+	.title {
+		left: -3%;
+    font-size: 22.5vw;
+	}
+	.text_wrap {
+		padding-left: 5%;
+		margin-top: 15%;
+	}
+	.text:last-child {
+    margin-left: 20%;
+  }
+	.text p:first-child {
+    font-size: 3vw;
+	}
+	.text p:last-child {
+    font-size: 2vw;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 767px) {
+	.title {
+		padding-top: 20%;
+	}
+}

@@ -125,3 +125,78 @@ main {
 .charles_info_wrap .info {
   background: url(../img/charlesback.jpg) no-repeat;
 }
+/* 태블릿 */
+@media (max-width: 1023px) {
+	header h1 a {
+		color: #000;
+	}
+	main {
+		width: 100%;
+	}
+	.line {
+		background: #000;
+	}
+	.portrait {
+		padding: 0 0 20px 20px;
+	}
+	.portrait:hover p {
+		color: #fff;
+	}
+	.portrait::after {
+		opacity: .3;
+	}
+	.portrait > p {
+		font-size: 4.8vw;
+		color: #000;
+	}
+	.portrait > p > span {
+		font-size: inherit;
+	}
+	.hubert::after, .hubert_info_wrap .face {
+		background-position-x: -300px;
+	}
+	.rembrandt::after, .henry::after, .charles::after,
+	.rembrandt_info_wrap .face, .henry_info_wrap .face, .charles_info_wrap .face {
+		background-position-x: -200px;
+	}
+	.info_wrap .info p:nth-of-type(1) {
+		font-size: 6vw;
+		padding: 10% 5% 5%;
+	}
+	.info_wrap .info p:nth-of-type(2) {
+		font-size: 2vw;
+		padding: 0 5%;
+	}
+	.info_wrap .info .prev {
+		width: 33.6px;
+		height: 33.6px;
+		background-size: 100%;
+		top: 3%;
+    left: 5%;
+	}
+}
+@media (max-width: 767px) {
+	main {
+		flex-wrap: wrap;
+	}
+	.portrait {
+		width: 50%;
+		height: 50%;
+	}
+	.hubert::after, .rembrandt::after, .henry::after, .charles::after {
+		background-size: 155%;
+		background-position: 50% 0;
+	}
+	.info_wrap {
+		flex-direction: column;
+	}
+	.info_wrap .face {
+		background-position: 50% 0;
+		background-size: cover;
+		width: 100%;
+	}
+	.info_wrap .info {
+		width: 100%;
+		background-position: center;
+	}
+}

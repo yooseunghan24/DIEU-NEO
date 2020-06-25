@@ -74,3 +74,36 @@
 	width: 386px;
 	height: 504px;
 }
+@media (max-width: 1023px) {
+	.gallery_wrap {
+		height: auto;
+	}
+	.gallery_wrap > p {
+		font-size: 7vw;
+		text-align: center;
+	}
+	.art_wrap {
+		padding-left: 0;
+		justify-content: space-around;
+		margin-bottom: 10%;
+	}
+	.art {
+		padding-right: 0;
+	}
+	.gallery_wrap .art1_img, .gallery_wrap .art2_img, .gallery_wrap .art3_img {
+		width: 25vw;
+		height: auto;
+	}
+	.art1_img img, .art2_img img, .art3_img img {
+		display: block;
+	}
+	.art_wrap .art p {
+		font-size: 3vw;
+	}
+	.rembrandt .art2 {
+		padding-top: 20%;
+	}
+}
+@media (max-width: 767px) {
+
+}

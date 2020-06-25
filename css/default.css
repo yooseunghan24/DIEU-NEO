@@ -11,7 +11,7 @@ header h1 {
 	text-align: center;
 	display: inline-block;
 	position: relative;
-	left: 50px;
+	left: 3%;
 	top: 25px;
 	z-index:5;
 }
@@ -28,7 +28,7 @@ header h1 a img {
 	display: block;
 	position: absolute;
 	top: 25px;
-	right: 50px;
+	right: 3%;
 	z-index: 5;
 }
 .line {
@@ -121,4 +121,9 @@ nav a.active {
 nav a sup {
 	font-style: italic;
 	font-size: 50px;
+}
+@media (max-width: 767px) {
+	nav a {
+		font-size: 20vw;
+	}
 }
