@@ -44,12 +44,21 @@ html, body {
     font-size: 3vw;
 	}
 	.text p:last-child {
-    font-size: 2vw;
+    font-size: 2.5vw;
     margin-top: 40px;
+	}
+	.copy {
+    font-size: 1.5vw;
   }
 }
 @media (max-width: 767px) {
 	.title {
 		padding-top: 20%;
 	}
+	.text p:first-child {
+    font-size: 4vw;
+	}
+	.text p:last-child {
+    font-size: 3.5vw;
+  }
 }

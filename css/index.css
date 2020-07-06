@@ -34,6 +34,7 @@ main {
 .picture_wrap > div img {
 	width: 100%;
 	height: 100%;
+	display: block;
 }
 .bridge {
 	width: 410px;
@@ -181,5 +182,12 @@ main {
 	.bridge_wrap, .landscape_wrap {
 		left: 50%;
 		transform: translateX(-50%);
+		width: 100%;
+	}
+	.bridge_wrap .picture, .landscape_wrap .picture {
+		width: 80%;
+    height: 80%;
+		margin: auto;
+		box-shadow: none;
 	}
 }
