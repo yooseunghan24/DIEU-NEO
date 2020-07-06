@@ -12,12 +12,12 @@ main {
   height: 100%;
   display: flex;
   align-items: flex-end;
-  padding: 0 0 30px 30px;
+  padding: 0 0 30px 20px;
   transition: 0.3s;
   position: relative;
 }
 .portrait > p {
-  font-size: 90px;
+  font-size: 4.8vw;
   position: relative;
   z-index: 1;
 }
@@ -75,15 +75,15 @@ main {
   z-index: 7;
   position: relative;
 }
-.info_wrap .info .prev {
-  width: 48px;
-  height: 48px;
+.close {
+  width: 32px;
+  height: 32px;
   position: absolute;
-  top: 10px;
-  left: 150px;
-  background: url(../img/arrow.png) no-repeat;
-  z-index: 8;
-  transform: rotate(180deg);
+  top: 20px;
+  left: 50%;
+  background: url(../img/close.png) no-repeat;
+  z-index: 20;
+  transform: translateX(-50%);
 }
 .info_wrap .info p {
   color: #fff;
@@ -140,15 +140,11 @@ main {
   .portrait {
     padding: 0 0 20px 20px;
   }
-  .portrait:hover p {
-    color: #fff;
-  }
   .portrait::after {
     opacity: 0.3;
   }
   .portrait > p {
     font-size: 4.8vw;
-    color: #000;
   }
   .portrait > p > span {
     font-size: inherit;
@@ -213,5 +209,8 @@ main {
   }
   .info_wrap .info p:nth-of-type(2) {
     font-size: 3vw;
+  }
+  .henry_info_wrap .info, .charles_info_wrap .info {
+    order: 1;
   }
 }
